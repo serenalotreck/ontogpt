@@ -66,7 +66,6 @@ classes:
     id_prefixes:
       - GO
     annotations:
-      annotators: sqlite:obo:go
       prompt: |-
         the name of a gene.
          Examples are Oropetium_20150105_12014, AT2G21490.
@@ -75,19 +74,22 @@ classes:
     id_prefixes:
       - PR
     annotations:
-            annotators: sqlite:obo:pr 
+      prompt: |-
+         the name of a protein.
+          Examples are SRFR and Sonic Hedgehog.
   Molecule:
     is_a: NamedEntity
     id_prefixes:
       - CHEBI
     annotations:
-            annotators: sqlite:obo:chebi
+      prompt: |-
+         the name of a molecule.
+          Examples are Jasmonic Acid, SA, or PEG.
   Organism:
     is_a: NamedEntity
     id_prefixes:
       - NCBITaxon
     annotations:
-      annotators: sqlite:taxslim.db
       prompt: |-
         the name of a taxonomic name or species.
          Examples are Bacillus subtilus, Bos taurus, blue whale.
